@@ -11,7 +11,7 @@
     <name>ch4-1-1</name>
     <url>http://springcloud.cn</url>
     <properties>
-        <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
+        <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
     </properties>
     <dependencyManagement>
         <dependencies>

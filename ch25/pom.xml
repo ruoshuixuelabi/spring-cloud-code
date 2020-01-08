@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.springcloud.book</groupId>
     <artifactId>ch25</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <name>ch25</name>
-
     <properties>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -23,12 +22,9 @@
         <logback.version>1.2.3</logback.version>
         <slf4j.version>1.7.22</slf4j.version>
         <halo.framework.version>1.0.4</halo.framework.version>
-
         <spring.cloud.version>Finchley.RELEASE</spring.cloud.version>
         <springfox-swagger2.version>2.8.0</springfox-swagger2.version>
-
     </properties>
-
     <modules>
         <module>crm-sales-client</module>
         <module>crm-sales-app</module>
@@ -37,7 +33,6 @@
         <module>crm-sales-start</module>
         <module>crm-sales-consumer</module>
     </modules>
-
     <dependencyManagement>
         <dependencies>
             <!--Framework-->
@@ -46,19 +41,16 @@
                 <artifactId>halo-common</artifactId>
                 <version>${halo.framework.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.xujin.halo</groupId>
                 <artifactId>halo-feign</artifactId>
                 <version>${halo.framework.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.xujin.halo</groupId>
                 <artifactId>halo-core</artifactId>
                 <version>${halo.framework.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.xujin.halo</groupId>
                 <artifactId>halo-starter</artifactId>
@@ -112,7 +104,6 @@
                 <version>${spring-boot.version}</version>
             </dependency>
             <!--Spring Boot End-->
-
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -120,13 +111,11 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
             <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger2</artifactId>
                 <version>${springfox-swagger2.version}</version>
             </dependency>
-
             <!-- Repository -->
             <dependency>
                 <groupId>mysql</groupId>
@@ -232,7 +221,6 @@
                 <version>5.1.36</version>
             </dependency>
             <!-- jdbc driver END -->
-
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
@@ -240,7 +228,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
     <build>
         <pluginManagement>
             <plugins>
@@ -250,11 +237,11 @@
                     <version>3.0.1</version>
                 </plugin>
                 <plugin>
-          				<artifactId>maven-deploy-plugin</artifactId>
-          				<configuration>
-          					<skip>true</skip>
-          				</configuration>
-          			</plugin>                
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <configuration>
+                        <skip>true</skip>
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
